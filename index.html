@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>墨卷 MoJuan - 沉浸式小说阅读</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'ink-900': '#1a1a1a',
+              'ink-800': '#2d2d2d',
+              'paper-50': '#fdfbf7',
+              'paper-100': '#f5f2eb',
+              'paper-200': '#e6e0d4',
+              'accent-red': '#c0392b',
+              'accent-gold': '#d4af37',
+            },
+            fontFamily: {
+              serif: ['"Noto Serif SC"', 'SimSun', 'STSong', 'serif'],
+              sans: ['"Noto Sans SC"', 'Microsoft YaHei', 'sans-serif'],
+              kaiti: ['"KaiTi"', 'STKaiti', 'serif'],
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+      /* Hide scrollbar for clean reading but allow functionality */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-paper-50 text-ink-900 font-sans antialiased">
+    <div id="root"></div>
+  </body>
+</html>
